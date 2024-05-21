@@ -1,0 +1,56 @@
+<p class="d-inline-flex gap-1">
+  <button
+    class="btn btn-outline-secondary"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapsePending"
+    aria-expanded="false"
+    aria-controls="collapsePending"
+  >
+    Pending
+  </button>
+  <button
+    class="btn btn-outline-success"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapseApproved"
+    aria-expanded="false"
+    aria-controls="collapseApproved"
+  >
+    Approved
+  </button>
+  <button
+    class="btn btn-outline-danger"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapseRejected"
+    aria-expanded="false"
+    aria-controls="collapseRejected"
+  >
+    Rejected
+  </button>
+</p>
+<div class="collapse" id="collapsePending">
+  <div class="card card-body">
+    <app-manager-enquiry-list
+      [enquiries]="enquiriesPending"
+      [Type] = "'Pending'"
+    ></app-manager-enquiry-list>
+  </div>
+</div>
+<div class="collapse" id="collapseApproved">
+  <div class="card card-body">
+    <app-manager-enquiry-list
+      [enquiries]="enquiriesApproved"
+      [Type] = "'Approved'"
+    ></app-manager-enquiry-list>
+  </div>
+</div>
+<div class="collapse" id="collapseRejected">
+  <div class="card card-body">
+    <app-manager-enquiry-list
+      [enquiries]="enquiriesRejected"
+      [Type] = "'Rejected'"
+    ></app-manager-enquiry-list>
+  </div>
+</div>
